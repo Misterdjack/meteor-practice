@@ -1,0 +1,37 @@
+  <head>
+    <title>Todo List</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="simple-todos.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  </head>
+   
+  <body>
+    <header>
+      <div class="flex-container">
+        <h1 id="header-title"><a href="#">Welcome to DarrenCharlesJack.com</a></h1>
+        <ul>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">My Projects</a></li>
+          <li><a href="#">Quotes</a></li>
+          <li><a href="#">Good Reads</a></li>
+        </ul>
+      </div> 
+    </header>
+
+    <div class="container">
+      <header>
+        <h1>Todo List</h1>
+      </header>
+   
+      <ul>
+        {{#each tasks}}
+          {{> task}}
+        {{/each}}
+      </ul>
+    </div>
+  </body>
+   
+  <template name="task">
+    <li>{{text}}</li>
+  </template>
